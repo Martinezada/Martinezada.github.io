@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Placeholder screenshotu projektu">
+  <rect width="1200" height="750" fill="#11171d"/>
+  <rect x="54" y="54" width="1092" height="642" rx="18" fill="#18212a" stroke="#2d3945" stroke-width="2"/>
+  <rect x="94" y="98" width="250" height="34" rx="6" fill="#70d6c7"/>
+  <rect x="94" y="162" width="1012" height="72" rx="10" fill="#222d37"/>
+  <rect x="124" y="184" width="170" height="20" rx="4" fill="#aab6c4"/>
+  <rect x="352" y="184" width="520" height="20" rx="4" fill="#718094"/>
+  <rect x="94" y="258" width="1012" height="72" rx="10" fill="#1f2933"/>
+  <rect x="124" y="280" width="210" height="20" rx="4" fill="#aab6c4"/>
+  <rect x="392" y="280" width="460" height="20" rx="4" fill="#718094"/>
+  <rect x="94" y="354" width="1012" height="72" rx="10" fill="#222d37"/>
+  <rect x="124" y="376" width="185" height="20" rx="4" fill="#aab6c4"/>
+  <rect x="367" y="376" width="540" height="20" rx="4" fill="#718094"/>
+  <rect x="94" y="500" width="310" height="120" rx="12" fill="#202a34"/>
+  <rect x="446" y="500" width="310" height="120" rx="12" fill="#202a34"/>
+  <rect x="798" y="500" width="308" height="120" rx="12" fill="#202a34"/>
+  <text x="94" y="668" fill="#718094" font-family="Arial, sans-serif" font-size="30">PROJECT SCREENSHOT PLACEHOLDER</text>
+</svg>

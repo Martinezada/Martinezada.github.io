@@ -1,0 +1,15 @@
+export const skills = [
+  { name: 'JavaScript', group: 'Core' },
+  { name: 'Ext JS', group: 'Frontend' },
+  { name: 'REST APIs', group: 'Integration' },
+  { name: 'API Integration', group: 'Integration' },
+  { name: 'Debugging', group: 'Engineering' },
+  { name: 'Git', group: 'Tools' },
+  { name: 'GitHub', group: 'Tools' },
+  { name: 'SQL', group: 'Data' },
+  { name: 'Node.js', group: 'Runtime' },
+  { name: 'AI-Assisted Software Development', group: 'Workflow' },
+  { name: 'Automation', group: 'Workflow' },
+  { name: 'Asynchronous Programming', group: 'Core' },
+  { name: 'Data Modelling', group: 'Data' },
+];

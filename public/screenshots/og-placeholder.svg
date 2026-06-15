@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Open Graph placeholder">
+  <rect width="1200" height="630" fill="#101419"/>
+  <rect x="70" y="70" width="1060" height="490" rx="22" fill="#161c23" stroke="#2b3642" stroke-width="2"/>
+  <text x="110" y="250" fill="#70d6c7" font-family="Arial, sans-serif" font-size="34">Adam Martinák</text>
+  <text x="110" y="325" fill="#edf2f7" font-family="Arial, sans-serif" font-size="64" font-weight="700">Enterprise JavaScript Developer</text>
+  <text x="110" y="395" fill="#aab6c4" font-family="Arial, sans-serif" font-size="30">Portfolio / Interactive resume</text>
+</svg>

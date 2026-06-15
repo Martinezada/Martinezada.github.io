@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio a interaktivní životopis enterprise JavaScript developera se zaměřením na Ext JS, REST API integrace a praktické řešení problémů."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#101419" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Adam Martinák | Enterprise JavaScript Developer" />
+    <meta
+      property="og:description"
+      content="Moderní developerské portfolio, zkušenosti, dovednosti a vybrané privátní projekty."
+    />
+    <meta property="og:image" content="./screenshots/og-placeholder.svg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Adam Martinák | Enterprise JavaScript Developer</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Přeskočit na obsah</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a class="brand" href="#hero" aria-label="Přejít na úvod">
+          <span class="brand-mark" aria-hidden="true">~/</span>
+          <span>Adam Martinák</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+          <span class="sr-only">Otevřít navigaci</span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-panel" id="primary-nav" data-nav-panel>
+          <a href="#about" class="nav-link">O mně</a>
+          <a href="#experience" class="nav-link">Zkušenosti</a>
+          <a href="#projects" class="nav-link">Projekty</a>
+          <a href="#skills" class="nav-link">Dovednosti</a>
+          <a href="#contact" class="nav-link">Kontakt</a>
+        </div>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Přepnout světlý režim">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section" id="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="eyebrow">Portfolio / interaktivní životopis</p>
+          <h1 id="hero-title">Adam Martinák</h1>
+          <p class="hero__role">Enterprise JavaScript Developer</p>
+          <p class="hero__summary">
+            Zaměřuji se na enterprise JavaScript, Ext JS aplikace, REST API integrace a praktické doručování
+            funkčních řešení v komplexních systémech.
+          </p>
+          <div class="hero__actions" aria-label="Hlavní odkazy">
+            <a class="button button--primary" href="#projects">Zobrazit projekty</a>
+            <a class="button" href="./resume.pdf" download>Stáhnout životopis</a>
+            <a class="button button--ghost" href="https://www.linkedin.com/in/adam-martin%C3%A1k-01249a246" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button button--ghost" href="https://github.com/Martinezada" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Profesní profil">
+          <figure class="hero-visual">
+            <img src="./hero-image.png" alt="Ilustrativní obraz dítěte hledícího na velký měsíc" />
+          </figure>
+          <dl class="metrics">
+            <div>
+              <dt>Praxe</dt>
+              <dd><span data-years-experience>0</span>+ let</dd>
+            </div>
+            <div>
+              <dt>Zaměření</dt>
+              <dd>Enterprise UI</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>JS / Ext JS / REST</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section split" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">O mně</p>
+          <h2 id="about-title">Krátce o mé cestě k vývoji.</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Jsem vývojář, který se do oboru vypracoval samostatně a prošel kariérním přechodem z řemeslných a obchodních
+            činností do enterprise softwarového vývoje. Díky tomu přistupuji k programování věcně:
+            nejdřív pochopit problém, potom navrhnout řešení, dodat jej a ověřit v reálném provozu.
+          </p>
+          <p>
+            Stavím na samostatnosti, odpovědnosti a schopnosti učit se nové technologie v kontextu
+            konkrétních potřeb produktu, týmu a uživatelů.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Pracovní zkušenosti</p>
+          <h2 id="experience-title">Enterprise aplikace, integrace a každodenní debugging.</h2>
+        </div>
+        <div class="timeline" data-experience-list></div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading section-heading--row">
+          <div>
+            <p class="eyebrow">Projekty</p>
+            <h2 id="projects-title">Nástroje, které řeší konkrétní workflow.</h2>
+          </div>
+          <p class="section-note">Privátní repozitáře, ukázky přes screenshoty a stručný popis funkcí.</p>
+        </div>
+        <div class="project-grid" data-project-list></div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Dovednosti</p>
+          <h2 id="skills-title">Technologie, integrace a pracovní návyky.</h2>
+        </div>
+        <div class="skills-grid" data-skills-list></div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="contact-title">E-mail a profily</h2>
+        </div>
+        <address class="contact-links">
+          <a href="mailto:marinezada@gmail.com">marinezada@gmail.com</a>
+          <a href="https://www.linkedin.com/in/adam-martin%C3%A1k-01249a246" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/Martinezada" target="_blank" rel="noreferrer">GitHub</a>
+        </address>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-current-year></span> Adam Martinák</span>
+      <span class="footer-note">Built with Vite, vanilla JavaScript and focused CSS.</span>
+    </footer>
+
+    <div class="modal" data-project-modal hidden>
+      <div class="modal__backdrop" data-close-modal></div>
+      <article class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabindex="-1">
+        <button class="icon-button modal__close" type="button" data-close-modal aria-label="Zavřít detail projektu">×</button>
+        <div data-project-modal-content></div>
+      </article>
+    </div>
+
+    <div class="lightbox" data-lightbox hidden>
+      <button class="icon-button lightbox__close" type="button" data-close-lightbox aria-label="Zavřít náhled">×</button>
+      <figure class="lightbox__figure" role="dialog" aria-modal="true" aria-label="Náhled screenshotu projektu">
+        <img data-lightbox-image src="" alt="" />
+        <figcaption data-lightbox-caption></figcaption>
+      </figure>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
