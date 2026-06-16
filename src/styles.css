@@ -184,8 +184,18 @@ a {
 }
 
 .theme-toggle {
+  position: relative;
+  overflow: hidden;
   width: 42px;
   height: 42px;
+  background:
+    radial-gradient(circle at 50% 50%, rgb(255 248 223 / 0.96) 0 25%, transparent 27%),
+    radial-gradient(circle at 50% 50%, rgb(217 181 111 / 0.36) 0 36%, transparent 38%),
+    conic-gradient(from 30deg, transparent, rgb(217 181 111 / 0.6), transparent 42%, rgb(155 199 161 / 0.4), transparent 78%);
+  transition:
+    border-color 180ms ease,
+    transform 220ms ease,
+    background 260ms ease;
 }
 
 .language-toggle {
@@ -203,16 +213,88 @@ a {
 }
 
 .theme-toggle__icon {
-  width: 18px;
-  height: 18px;
-  border: 2px solid currentColor;
+  position: relative;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  box-shadow: inset 7px -4px 0 0 var(--surface);
+  background:
+    radial-gradient(circle at 45% 42%, #fff8df 0 34%, #f6d27d 35% 56%, transparent 58%),
+    conic-gradient(from 120deg, #f5d37e, #fff4c7, #d89936, #f5d37e);
+  box-shadow:
+    0 0 0 1px rgb(241 240 232 / 0.08),
+    0 0 18px rgb(217 181 111 / 0.44),
+    inset -5px -6px 10px rgb(155 111 36 / 0.22);
+  transition:
+    transform 320ms ease,
+    filter 220ms ease,
+    background 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.theme-toggle__icon::before,
+.theme-toggle__icon::after {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.theme-toggle__icon::before {
+  inset: 7px 4px 4px 8px;
+  background: rgb(15 17 16 / 0.14);
+  box-shadow: none;
+}
+
+.theme-toggle__icon::after {
+  width: 4px;
+  height: 4px;
+  top: 5px;
+  right: 4px;
+  background: #8a681f;
+  box-shadow:
+    -13px 11px 0 -1px rgb(155 199 161 / 0.72),
+    -4px 17px 0 -1px rgb(241 240 232 / 0.7);
+}
+
+.theme-toggle:hover {
+  border-color: color-mix(in srgb, var(--accent), var(--warm) 35%);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:hover .theme-toggle__icon {
+  filter: saturate(1.2);
+  transform: rotate(22deg) scale(1.04);
 }
 
 :root[data-theme="light"] .theme-toggle__icon {
-  box-shadow: none;
-  background: currentColor;
+  background:
+    radial-gradient(circle at 44% 42%, #020303 0 32%, #0a0c0a 33% 54%, transparent 56%),
+    conic-gradient(from 140deg, transparent 0 9%, rgb(217 181 111 / 0.92) 13%, transparent 23%, rgb(62 124 82 / 0.82) 38%, transparent 52%, rgb(217 181 111 / 0.7) 70%, transparent 82%);
+  box-shadow:
+    0 0 0 1px rgb(25 26 23 / 0.08),
+    0 0 18px rgb(62 124 82 / 0.24),
+    inset 0 0 10px rgb(0 0 0 / 0.9);
+  transform: rotate(180deg);
+}
+
+:root[data-theme="light"] .theme-toggle {
+  background:
+    radial-gradient(circle at 52% 48%, #050505 0 28%, transparent 30%),
+    radial-gradient(circle at 50% 50%, rgb(62 124 82 / 0.28) 0 31%, transparent 33%),
+    conic-gradient(from 210deg, transparent, rgb(155 111 36 / 0.46), transparent 34%, rgb(62 124 82 / 0.5), transparent 68%);
+}
+
+:root[data-theme="light"] .theme-toggle__icon::before {
+  inset: 5px;
+  background: #020202;
+  box-shadow: inset -2px 2px 4px rgb(255 255 255 / 0.04);
+}
+
+:root[data-theme="light"] .theme-toggle__icon::after {
+  background: var(--warm);
+  box-shadow:
+    -13px 11px 0 -1px rgb(62 124 82 / 0.72),
+    -4px 17px 0 -1px rgb(25 26 23 / 0.36);
 }
 
 .nav-toggle {
