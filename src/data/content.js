@@ -1,0 +1,168 @@
+export const defaultLanguage = 'cs';
+
+export const content = {
+  cs: {
+    documentTitle: 'Adam Martinák | Enterprise JavaScript Developer',
+    metaDescription:
+      'Portfolio a interaktivní životopis enterprise JavaScript developera se zaměřením na Ext JS, REST API integrace a praktické řešení problémů.',
+    ogDescription: 'Moderní developerské portfolio, zkušenosti, dovednosti a vybrané privátní projekty.',
+    skipLink: 'Přeskočit na obsah',
+    navLabel: 'Hlavní navigace',
+    brandLabel: 'Přejít na úvod',
+    openNav: 'Otevřít navigaci',
+    themeLight: 'Přepnout světlý režim',
+    themeDark: 'Přepnout tmavý režim',
+    languageLabel: 'Přepnout jazyk',
+    nav: {
+      about: 'O mně',
+      experience: 'Zkušenosti',
+      projects: 'Projekty',
+      skills: 'Dovednosti',
+      contact: 'Kontakt',
+    },
+    hero: {
+      eyebrow: 'Portfolio / interaktivní životopis',
+      role: 'Enterprise JavaScript Developer',
+      summary:
+        'Zaměřuji se na enterprise JavaScript, Ext JS aplikace, REST API integrace a praktické doručování funkčních řešení v komplexních systémech.',
+      actionsLabel: 'Hlavní odkazy',
+      projects: 'Zobrazit projekty',
+      resume: 'Stáhnout životopis (EN)',
+      profileLabel: 'Profesní profil',
+      imageAlt: 'Ilustrativní obraz dítěte hledícího na velký měsíc',
+      metrics: {
+        experience: 'Praxe',
+        yearsSuffix: '+ let',
+        focus: 'Zaměření',
+        stack: 'Stack',
+      },
+    },
+    about: {
+      eyebrow: 'O mně',
+      title: 'Krátce o mé cestě k vývoji.',
+      paragraphs: [
+        'Jsem vývojář, který se do oboru vypracoval samostatně a prošel kariérním přechodem z řemeslných a obchodních činností do enterprise softwarového vývoje. Díky tomu přistupuji k programování věcně: nejdřív pochopit problém, potom navrhnout řešení, dodat jej a ověřit v reálném provozu.',
+        'Stavím na samostatnosti, odpovědnosti a schopnosti učit se nové technologie v kontextu konkrétních potřeb produktu, týmu a uživatelů.',
+      ],
+    },
+    experience: {
+      eyebrow: 'Pracovní zkušenosti',
+      title: 'Enterprise aplikace, integrace a každodenní debugging.',
+    },
+    projects: {
+      eyebrow: 'Projekty',
+      title: 'Nástroje, které řeší konkrétní workflow.',
+      note: 'Privátní repozitáře, ukázky přes screenshoty a stručný popis funkcí.',
+    },
+    skills: {
+      eyebrow: 'Dovednosti',
+      title: 'Technologie, integrace a pracovní návyky.',
+    },
+    contact: {
+      eyebrow: 'Kontakt',
+      title: 'E-mail a profily',
+    },
+    footer: 'Built with Vite, vanilla JavaScript and focused CSS.',
+    modal: {
+      closeProject: 'Zavřít detail projektu',
+      closeLightbox: 'Zavřít náhled',
+      lightboxLabel: 'Náhled screenshotu projektu',
+    },
+    projectUi: {
+      detail: 'Detail projektu',
+      openDetail: 'Otevřít detail projektu',
+      techStack: 'Tech stack',
+      otherScreenshots: 'Další screenshoty projektu',
+      openMainScreenshot: 'Otevřít hlavní screenshot projektu',
+      openScreenshot: 'Otevřít screenshot',
+      mainScreenshot: 'hlavní screenshot',
+      screenshot: 'screenshot',
+      features: 'Hlavní funkce',
+      gallery: 'Galerie',
+      caseStudyMissing: 'Case study není doplněná',
+      caseStudy: 'Case study',
+    },
+  },
+  en: {
+    documentTitle: 'Adam Martinák | Enterprise JavaScript Developer',
+    metaDescription:
+      'Portfolio and interactive resume of an enterprise JavaScript developer focused on Ext JS, REST API integrations and practical problem solving.',
+    ogDescription: 'Modern developer portfolio, experience, skills and selected private projects.',
+    skipLink: 'Skip to content',
+    navLabel: 'Main navigation',
+    brandLabel: 'Go to intro',
+    openNav: 'Open navigation',
+    themeLight: 'Switch to light mode',
+    themeDark: 'Switch to dark mode',
+    languageLabel: 'Switch language',
+    nav: {
+      about: 'About',
+      experience: 'Experience',
+      projects: 'Projects',
+      skills: 'Skills',
+      contact: 'Contact',
+    },
+    hero: {
+      eyebrow: 'Portfolio / interactive resume',
+      role: 'Enterprise JavaScript Developer',
+      summary:
+        'I focus on enterprise JavaScript, Ext JS applications, REST API integrations and delivering practical solutions in complex systems.',
+      actionsLabel: 'Primary links',
+      projects: 'View projects',
+      resume: 'Download resume',
+      profileLabel: 'Professional profile',
+      imageAlt: 'Illustrative image of a child looking at a large moon',
+      metrics: {
+        experience: 'Experience',
+        yearsSuffix: '+ years',
+        focus: 'Focus',
+        stack: 'Stack',
+      },
+    },
+    about: {
+      eyebrow: 'About',
+      title: 'A short note on my path into software development.',
+      paragraphs: [
+        'I am a developer who worked his way into software independently after transitioning from hands-on technical work and business intermediation into enterprise software development. That background shapes how I approach engineering: understand the problem, design a practical solution, deliver it and verify it in real use.',
+        'I value ownership, independence and the ability to learn new technologies in the context of real product, team and user needs.',
+      ],
+    },
+    experience: {
+      eyebrow: 'Experience',
+      title: 'Enterprise applications, integrations and everyday debugging.',
+    },
+    projects: {
+      eyebrow: 'Projects',
+      title: 'Tools built around concrete workflows.',
+      note: 'Private repositories, screenshot-based previews and concise feature summaries.',
+    },
+    skills: {
+      eyebrow: 'Skills',
+      title: 'Technologies, integrations and working habits.',
+    },
+    contact: {
+      eyebrow: 'Contact',
+      title: 'Email and profiles',
+    },
+    footer: 'Built with Vite, vanilla JavaScript and focused CSS.',
+    modal: {
+      closeProject: 'Close project detail',
+      closeLightbox: 'Close preview',
+      lightboxLabel: 'Project screenshot preview',
+    },
+    projectUi: {
+      detail: 'Project detail',
+      openDetail: 'Open project detail',
+      techStack: 'Tech stack',
+      otherScreenshots: 'Additional screenshots for project',
+      openMainScreenshot: 'Open main screenshot for project',
+      openScreenshot: 'Open screenshot',
+      mainScreenshot: 'main screenshot',
+      screenshot: 'screenshot',
+      features: 'Key features',
+      gallery: 'Gallery',
+      caseStudyMissing: 'Case study not added',
+      caseStudy: 'Case study',
+    },
+  },
+};

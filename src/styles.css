@@ -120,9 +120,9 @@ a {
 
 .nav {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
   width: min(100% - 40px, var(--max-width));
   min-height: var(--header-height);
   margin: 0 auto;
@@ -171,6 +171,7 @@ a {
 }
 
 .theme-toggle,
+.language-toggle,
 .nav-toggle,
 .icon-button {
   display: inline-grid;
@@ -185,6 +186,20 @@ a {
 .theme-toggle {
   width: 42px;
   height: 42px;
+}
+
+.language-toggle {
+  min-width: 46px;
+  height: 42px;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 760;
+}
+
+.language-toggle:hover {
+  border-color: var(--accent);
+  color: var(--text);
 }
 
 .theme-toggle__icon {
@@ -805,7 +820,7 @@ h3 {
 
 @media (max-width: 920px) {
   .nav {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-between;
   }
 

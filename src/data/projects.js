@@ -1,62 +1,84 @@
-const placeholderScreenshots = [
-  {
-    src: './screenshots/project-placeholder-1.svg',
-    alt: 'Placeholder screenshotu projektu - seznam dat',
-  },
-  {
-    src: './screenshots/project-placeholder-2.svg',
-    alt: 'Placeholder screenshotu projektu - detail workflow',
-  },
-];
-
 export const projects = [
   {
     title: 'Solana Copy-Trade Wallet Scanner',
-    description:
-      'Privátní nástroj pro monitoring vybraných Solana peněženek a analýzu obchodních signálů v praktickém workflow.',
+    description: {
+      cs: 'Privátní nástroj pro monitoring vybraných Solana peněženek a analýzu obchodních signálů v praktickém workflow.',
+      en: 'A private tool for monitoring selected Solana wallets and analyzing trading signals in a practical workflow.',
+    },
     stack: ['JavaScript', 'TypeScript', 'Node.js', 'REST APIs', 'SQL', 'Automation'],
-    features: [
-      'Sledování vybraných peněženek a transakčních vzorců.',
-      'Filtrování relevantních událostí pro rychlé rozhodování.',
-      'Příprava dat pro notifikace a další automatizaci.',
-    ],
+    features: {
+      cs: [
+        'Sledování vybraných peněženek a transakčních vzorců.',
+        'Filtrování relevantních událostí pro rychlé rozhodování.',
+        'Příprava dat pro notifikace a další automatizaci.',
+      ],
+      en: [
+        'Monitoring selected wallets and transaction patterns.',
+        'Filtering relevant events for faster decision making.',
+        'Preparing data for notifications and further automation.',
+      ],
+    },
     repository: 'Private repository',
     caseStudyUrl: '[CASE_STUDY_URL]',
     screenshots: [
       {
         src: './screenshots/solana-wallet-scanner-dashboard.png',
-        alt: 'Dashboard Solana Wallet Scanneru s filtrováním wallet dat, skóre, ROI a tabulkou sledovaných peněženek',
+        alt: {
+          cs: 'Dashboard Solana Wallet Scanneru s filtrováním wallet dat, skóre, ROI a tabulkou sledovaných peněženek',
+          en: 'Solana Wallet Scanner dashboard with wallet data filters, score, ROI and a table of tracked wallets',
+        },
       },
     ],
   },
   {
     title: 'Polymarket Wallet Scanner',
-    description:
-      'Analytický scanner pro práci s veřejně dostupnými wallet daty, signalizaci aktivit a strukturované vyhodnocování tržištních pohybů.',
+    description: {
+      cs: 'Analytický scanner pro práci s veřejně dostupnými wallet daty, signalizaci aktivit a strukturované vyhodnocování tržních pohybů.',
+      en: 'An analytics scanner for working with publicly available wallet data, activity signals and structured evaluation of market movements.',
+    },
     stack: ['JavaScript', 'TypeScript', 'Node.js', 'API Integration', 'Data Modelling'],
-    features: [
-      'Zpracování wallet aktivit do přehledných datových struktur.',
-      'Vyhodnocování změn a prioritizace zajímavých událostí.',
-      'Oddělení datové vrstvy od prezentační logiky.',
-    ],
+    features: {
+      cs: [
+        'Zpracování wallet aktivit do přehledných datových struktur.',
+        'Vyhodnocování změn a prioritizace zajímavých událostí.',
+        'Oddělení datové vrstvy od prezentační logiky.',
+      ],
+      en: [
+        'Processing wallet activity into clear data structures.',
+        'Evaluating changes and prioritizing interesting events.',
+        'Separating the data layer from presentation logic.',
+      ],
+    },
     repository: 'Private repository',
     caseStudyUrl: '[CASE_STUDY_URL]',
     screenshots: [
       {
         src: './screenshots/polymarket-dashboard.png',
-        alt: 'Dashboard Polymarket Wallet Scanneru s přehledem bankrollu, signálů, strategií a watchlistu',
+        alt: {
+          cs: 'Dashboard Polymarket Wallet Scanneru s přehledem bankrollu, signálů, strategií a watchlistu',
+          en: 'Polymarket Wallet Scanner dashboard with bankroll, signals, strategies and watchlist overview',
+        },
       },
       {
         src: './screenshots/polymarket-telegram-signal.png',
-        alt: 'Telegram notifikace z Polymarket scanneru s kopírovaným signálem a parametry vstupu',
+        alt: {
+          cs: 'Telegram notifikace z Polymarket scanneru s kopírovaným signálem a parametry vstupu',
+          en: 'Telegram notification from the Polymarket scanner with copied signal and entry parameters',
+        },
       },
       {
         src: './screenshots/polymarket-telegram-summary-1.png',
-        alt: 'Telegram paper summary s počtem watchlist peněženek, signálů a otevřených pozic',
+        alt: {
+          cs: 'Telegram paper summary s počtem watchlist peněženek, signálů a otevřených pozic',
+          en: 'Telegram paper summary with watchlist wallet count, signals and open positions',
+        },
       },
       {
         src: './screenshots/polymarket-telegram-summary-2.png',
-        alt: 'Telegram paper summary s detailním záznamem zkopírovaného Polymarket signálu',
+        alt: {
+          cs: 'Telegram paper summary s detailním záznamem zkopírovaného Polymarket signálu',
+          en: 'Telegram paper summary with a detailed copied Polymarket signal',
+        },
       },
     ],
   },
