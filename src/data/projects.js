@@ -28,6 +28,20 @@ export const projects = [
           en: 'Solana Wallet Scanner dashboard with wallet data filters, score, ROI and a table of tracked wallets',
         },
       },
+      {
+        src: './screenshots/solana-wallet-scanner-table.png',
+        alt: {
+          cs: 'Tabulka Solana Wallet Scanneru s wallet adresami, skóre, ROI, winrate a realizovaným PnL',
+          en: 'Solana Wallet Scanner table with wallet addresses, score, ROI, win rate and realized PnL',
+        },
+      },
+      {
+        src: './screenshots/solana-wallet-scanner-filters.png',
+        alt: {
+          cs: 'Filtry Solana Wallet Scanneru pro ROI, winrate, tokeny, balance, hold time a sniper/non-standard nastavení',
+          en: 'Solana Wallet Scanner filters for ROI, win rate, tokens, balance, hold time and sniper/non-standard settings',
+        },
+      },
     ],
   },
   {

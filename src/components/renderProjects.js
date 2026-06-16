@@ -16,7 +16,9 @@ export function renderProjects(projects, target, language = 'cs', ui) {
                     type="button"
                     data-lightbox-src="${screenshot.src}"
                     data-lightbox-alt="${screenshotAlt}"
-                    data-lightbox-caption="${project.title} - ${ui.screenshot} ${screenshotIndex + 2}"
+                    data-lightbox-caption="${project.title}"
+                    data-project-index="${index}"
+                    data-screenshot-index="${screenshotIndex + 1}"
                     aria-label="${ui.openScreenshot} ${screenshotIndex + 2} ${project.title}"
                   >
                     <img src="${screenshot.src}" alt="" loading="lazy" />
@@ -35,7 +37,9 @@ export function renderProjects(projects, target, language = 'cs', ui) {
             type="button"
             data-lightbox-src="${featuredScreenshot.src}"
             data-lightbox-alt="${featuredAlt}"
-            data-lightbox-caption="${project.title} - ${ui.mainScreenshot}"
+            data-lightbox-caption="${project.title}"
+            data-project-index="${index}"
+            data-screenshot-index="0"
             aria-label="${ui.openMainScreenshot} ${project.title}"
           >
             <img src="${featuredScreenshot.src}" alt="" loading="lazy" />
@@ -63,7 +67,7 @@ export function renderProjects(projects, target, language = 'cs', ui) {
     .join('');
 }
 
-export function createProjectDetail(project, language = 'cs', ui) {
+export function createProjectDetail(project, language = 'cs', ui, projectIndex = 0) {
   const caseStudyLink = project.caseStudyUrl?.startsWith('[')
     ? `<span class="button button--disabled" aria-disabled="true">${ui.caseStudyMissing}</span>`
     : `<a class="button button--primary" href="${project.caseStudyUrl}">${ui.caseStudy}</a>`;
@@ -97,7 +101,9 @@ export function createProjectDetail(project, language = 'cs', ui) {
                 type="button"
                 data-lightbox-src="${screenshot.src}"
                 data-lightbox-alt="${screenshotAlt}"
-                data-lightbox-caption="${project.title} - ${ui.screenshot} ${index + 1}"
+                data-lightbox-caption="${project.title}"
+                data-project-index="${projectIndex}"
+                data-screenshot-index="${index}"
               >
                 <img src="${screenshot.src}" alt="${screenshotAlt}" loading="lazy" />
               </button>

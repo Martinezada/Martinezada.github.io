@@ -876,6 +876,7 @@ h3 {
 }
 
 .lightbox__figure {
+  position: relative;
   width: min(980px, 100%);
   margin: 0;
 }
@@ -894,6 +895,43 @@ h3 {
   font-weight: 700;
   margin-top: 12px;
   text-align: center;
+}
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 40px;
+  height: 52px;
+  transform: translateY(-50%);
+  border-color: color-mix(in srgb, var(--line), transparent 22%);
+  background: color-mix(in srgb, var(--bg), transparent 36%);
+  color: color-mix(in srgb, var(--text), transparent 18%);
+  font-size: 1.55rem;
+  line-height: 1;
+  opacity: 0.68;
+  backdrop-filter: blur(10px);
+  transition:
+    opacity 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.lightbox__nav:hover,
+.lightbox__nav:focus-visible {
+  opacity: 1;
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--surface), transparent 10%);
+  transform: translateY(-50%) scale(1.02);
+}
+
+.lightbox__nav--prev {
+  left: 14px;
+}
+
+.lightbox__nav--next {
+  right: 14px;
 }
 
 [hidden] {
@@ -1032,6 +1070,20 @@ h3 {
 
   .modal__panel {
     max-height: calc(100svh - 24px);
+  }
+
+  .lightbox__nav {
+    width: 36px;
+    height: 48px;
+    font-size: 1.4rem;
+  }
+
+  .lightbox__nav--prev {
+    left: 8px;
+  }
+
+  .lightbox__nav--next {
+    right: 8px;
   }
 }
 

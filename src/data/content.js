@@ -68,6 +68,8 @@ export const content = {
       closeProject: 'Zavřít detail projektu',
       closeLightbox: 'Zavřít náhled',
       lightboxLabel: 'Náhled screenshotu projektu',
+      previousScreenshot: 'Předchozí screenshot',
+      nextScreenshot: 'Další screenshot',
     },
     projectUi: {
       detail: 'Detail projektu',
@@ -151,6 +153,8 @@ export const content = {
       closeProject: 'Close project detail',
       closeLightbox: 'Close preview',
       lightboxLabel: 'Project screenshot preview',
+      previousScreenshot: 'Previous screenshot',
+      nextScreenshot: 'Next screenshot',
     },
     projectUi: {
       detail: 'Project detail',

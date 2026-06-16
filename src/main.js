@@ -20,8 +20,12 @@ const projectModalContent = document.querySelector('[data-project-modal-content]
 const lightbox = document.querySelector('[data-lightbox]');
 const lightboxImage = document.querySelector('[data-lightbox-image]');
 const lightboxCaption = document.querySelector('[data-lightbox-caption]');
+const lightboxPrevious = document.querySelector('[data-lightbox-prev]');
+const lightboxNext = document.querySelector('[data-lightbox-next]');
 let lastFocusedElement = null;
 let activeProject = null;
+let activeLightboxProjectIndex = 0;
+let activeLightboxScreenshotIndex = 0;
 let currentLanguage = localStorage.getItem('language') || defaultLanguage;
 
 renderSkills(skills, document.querySelector('[data-skills-list]'));
@@ -59,6 +63,8 @@ document.addEventListener('click', (event) => {
   const lightboxButton = event.target.closest('[data-lightbox-src]');
   const closeModalButton = event.target.closest('[data-close-modal]');
   const closeLightboxButton = event.target.closest('[data-close-lightbox]');
+  const previousLightboxButton = event.target.closest('[data-lightbox-prev]');
+  const nextLightboxButton = event.target.closest('[data-lightbox-next]');
 
   if (detailButton) {
     openProjectModal(projects[Number(detailButton.dataset.projectDetail)], detailButton);
@@ -75,9 +81,27 @@ document.addEventListener('click', (event) => {
   if (closeLightboxButton || event.target === lightbox) {
     closeLightbox();
   }
+
+  if (previousLightboxButton) {
+    showAdjacentLightboxImage(-1);
+  }
+
+  if (nextLightboxButton) {
+    showAdjacentLightboxImage(1);
+  }
 });
 
 document.addEventListener('keydown', (event) => {
+  if (!lightbox.hidden && event.key === 'ArrowLeft') {
+    showAdjacentLightboxImage(-1);
+    return;
+  }
+
+  if (!lightbox.hidden && event.key === 'ArrowRight') {
+    showAdjacentLightboxImage(1);
+    return;
+  }
+
   if (event.key !== 'Escape') {
     return;
   }
@@ -150,6 +174,9 @@ function setLanguage(language) {
     element.setAttribute('alt', getContentValue(labels, element.dataset.i18nAlt));
   });
 
+  lightboxPrevious.setAttribute('aria-label', labels.modal.previousScreenshot);
+  lightboxNext.setAttribute('aria-label', labels.modal.nextScreenshot);
+
   document.querySelector('[data-about-copy]').innerHTML = labels.about.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('');
   document.querySelector('[data-resume-link]').setAttribute('href', labels.hero.resumeUrl);
   languageCurrent.textContent = currentLanguage === 'cs' ? 'EN' : 'CZ';
@@ -158,7 +185,12 @@ function setLanguage(language) {
   renderProjects(projects, document.querySelector('[data-project-list]'), currentLanguage, labels.projectUi);
 
   if (!projectModal.hidden && activeProject) {
-    projectModalContent.innerHTML = createProjectDetail(activeProject, currentLanguage, labels.projectUi);
+    projectModalContent.innerHTML = createProjectDetail(
+      activeProject,
+      currentLanguage,
+      labels.projectUi,
+      projects.indexOf(activeProject),
+    );
   }
 
   setTheme(root.dataset.theme || 'dark');
@@ -167,7 +199,12 @@ function setLanguage(language) {
 function openProjectModal(project, trigger) {
   lastFocusedElement = trigger;
   activeProject = project;
-  projectModalContent.innerHTML = createProjectDetail(project, currentLanguage, content[currentLanguage].projectUi);
+  projectModalContent.innerHTML = createProjectDetail(
+    project,
+    currentLanguage,
+    content[currentLanguage].projectUi,
+    projects.indexOf(project),
+  );
   projectModal.hidden = false;
   document.body.dataset.modalOpen = 'true';
   projectModalPanel.focus();
@@ -183,9 +220,9 @@ function closeProjectModal() {
 
 function openLightbox(trigger) {
   lastFocusedElement = trigger;
-  lightboxImage.src = trigger.dataset.lightboxSrc;
-  lightboxImage.alt = trigger.dataset.lightboxAlt;
-  lightboxCaption.textContent = trigger.dataset.lightboxCaption;
+  activeLightboxProjectIndex = Number(trigger.dataset.projectIndex);
+  activeLightboxScreenshotIndex = Number(trigger.dataset.screenshotIndex);
+  updateLightboxImage();
   lightbox.hidden = false;
   document.body.dataset.modalOpen = 'true';
   lightbox.querySelector('button').focus();
@@ -200,6 +237,37 @@ function closeLightbox() {
   lastFocusedElement?.focus();
 }
 
+function showAdjacentLightboxImage(direction) {
+  const gallery = projects[activeLightboxProjectIndex]?.screenshots;
+
+  if (!gallery?.length) {
+    return;
+  }
+
+  activeLightboxScreenshotIndex = (activeLightboxScreenshotIndex + direction + gallery.length) % gallery.length;
+  updateLightboxImage();
+}
+
+function updateLightboxImage() {
+  const project = projects[activeLightboxProjectIndex];
+  const screenshot = project?.screenshots[activeLightboxScreenshotIndex];
+
+  if (!project || !screenshot) {
+    return;
+  }
+
+  const galleryHasMultipleImages = project.screenshots.length > 1;
+  lightboxImage.src = screenshot.src;
+  lightboxImage.alt = localize(screenshot.alt, currentLanguage);
+  lightboxCaption.textContent = project.title;
+  lightboxPrevious.hidden = !galleryHasMultipleImages;
+  lightboxNext.hidden = !galleryHasMultipleImages;
+}
+
 function getContentValue(source, path) {
   return path.split('.').reduce((value, key) => value?.[key], source) ?? '';
+}
+
+function localize(value, language) {
+  return value?.[language] ?? value?.cs ?? value;
 }
