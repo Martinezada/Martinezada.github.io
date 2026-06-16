@@ -151,6 +151,7 @@ function setLanguage(language) {
   });
 
   document.querySelector('[data-about-copy]').innerHTML = labels.about.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('');
+  document.querySelector('[data-resume-link]').setAttribute('href', labels.hero.resumeUrl);
   languageCurrent.textContent = currentLanguage === 'cs' ? 'EN' : 'CZ';
 
   renderTimeline(experience, document.querySelector('[data-experience-list]'), currentLanguage);

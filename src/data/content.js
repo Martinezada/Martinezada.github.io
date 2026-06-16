@@ -27,7 +27,8 @@ export const content = {
         'Zaměřuji se na enterprise JavaScript, Ext JS aplikace, REST API integrace a praktické doručování funkčních řešení v komplexních systémech.',
       actionsLabel: 'Hlavní odkazy',
       projects: 'Zobrazit projekty',
-      resume: 'Stáhnout životopis (EN)',
+      resume: 'Stáhnout životopis',
+      resumeUrl: './resume-cz.pdf',
       profileLabel: 'Profesní profil',
       imageAlt: 'Ilustrativní obraz dítěte hledícího na velký měsíc',
       metrics: {
@@ -110,6 +111,7 @@ export const content = {
       actionsLabel: 'Primary links',
       projects: 'View projects',
       resume: 'Download resume',
+      resumeUrl: './resume-en.pdf',
       profileLabel: 'Professional profile',
       imageAlt: 'Illustrative image of a child looking at a large moon',
       metrics: {
